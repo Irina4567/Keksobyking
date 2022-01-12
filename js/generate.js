@@ -10,7 +10,7 @@ let cards = document.createDocumentFragment();
 announcements.forEach((announcement) => {
   const author = announcement[0];
   const offer = announcement[1];
-  let element = templateCard.cloneNode(true);
+  const element = templateCard.cloneNode(true);
   element.querySelector('.popup__avatar').src = author.avatar;
   element.querySelector('.popup__title').textContent = offer.title;
   element.querySelector('.popup__text--address').textContent = offer.address;
@@ -39,7 +39,7 @@ announcements.forEach((announcement) => {
 
   let featuresList = element.querySelector('.popup__features');
   featuresList.innerHTML='';
-  let offerFeatures = offer.features.split(',');
+  const offerFeatures = offer.features.split(',');
   offerFeatures.forEach((feature)=> {
     let element = document.createElement('li');
     element.classList.add("popup__feature", `popup__feature--${ feature}`);
@@ -49,9 +49,9 @@ announcements.forEach((announcement) => {
   element.querySelector('.popup__description').textContent = offer.description;
 
   let photosList = element.querySelector('.popup__photos');
-  let templatePhoto = element.querySelector('.popup__photo');
+  const templatePhoto = element.querySelector('.popup__photo');
   element.querySelector('.popup__photo').remove();
-  let photos = offer.photos.split(',');
+  const photos = offer.photos.split(',');
 
   photos.forEach((photo)=> {
     let photoElement = templatePhoto.cloneNode(true);
