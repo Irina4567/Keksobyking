@@ -44,14 +44,14 @@ let shuffle = (numPool)=> {
 };
 
 let getRandomArrayElements = (array)=> {
-  const r = getRandomIntInclusive(array.length-1);
+  const r = getRandomIntInclusive(array.length);
   let numPool = Array.from({ length: array.length }, (v, i) =>  i);
   numPool = shuffle(numPool);
   let result='';
   for (let i=0; i<r; i++) {
     result += array[numPool[i]];
     if (i!=r-1) {
-      result +=', ';
+      result +=',';
     }
   }
   return result;

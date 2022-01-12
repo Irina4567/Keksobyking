@@ -1,4 +1,4 @@
-import {authors} from "./data.js";
+import {announcements} from "./data.js";
+import {canvas} from "./generate.js"
 
-console.log(authors);
 

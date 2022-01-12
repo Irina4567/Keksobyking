@@ -64,7 +64,7 @@ const allPhotos = [
   'http://o0.github.io/assets/images/tokyo/hotel3.jpg',
 ];
 
-const createAuthor = () => {
+const createAnnouncement = () => {
   let author  = {
     avatar:'img/avatars/user' +getNumberLeadingZero(AUTHOR_COUNT)+ '.png',
   };
@@ -89,6 +89,6 @@ const createAuthor = () => {
   return [author, offer, location];
 }
 
-const authors = new Array(AUTHOR_COUNT).fill(null).map(()=> createAuthor());
+const announcements = new Array(AUTHOR_COUNT).fill(null).map(()=> createAnnouncement());
 
-export {authors};
+export {announcements};
